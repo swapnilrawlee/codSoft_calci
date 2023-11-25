@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calci</title>
+    <link rel="stylesheet" href="calcii.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script>
+      function zeroc() {
+        document.getElementById("display").value += "0";
+      }
+      function onec() {
+        document.getElementById("display").value += "1";
+      }
+      function twoc() {
+        document.getElementById("display").value += "2";
+      }
+      function threec() {
+        document.getElementById("display").value += "3";
+      }
+      function fourc() {
+        document.getElementById("display").value += "4";
+      }
+      function fivec() {
+        document.getElementById("display").value += "5";
+      }
+      function sixc() {
+        document.getElementById("display").value += "6";
+      }
+      function sevenc() {
+        document.getElementById("display").value += "7";
+      }
+      function eightc() {
+        document.getElementById("display").value += "8";
+      }
+      function ninec() {
+        document.getElementById("display").value += "9";
+      }
+      function multiplyc() {
+        document.getElementById("display").value += "*";
+      }
+      function plusc() {
+        document.getElementById("display").value += "+";
+      }
+      function dividec() {
+        document.getElementById("display").value += "/";
+      }
+      function minusc() {
+        document.getElementById("display").value += "-";
+      }
+      function resetc() {
+        document.getElementById("display").value = "";
+        previousNumber = "";
+      }
+
+      let previousNumber = "";
+
+      function equalc() {
+        const displayValue = document.getElementById("display").value;
+        const result = eval(displayValue);
+        document.getElementById("display").value = result;
+        previousNumber = document.getElementById("display").value;
+      }
+    </script>
+  </head>
+  <body class="wrapper">
+    <h1 class="flex hitem-center vitem-center">Calculator</h1>
+    <div class="container ">
+
+      <div class="flex hitem-center vitem-center">
+        <input type="numbers " name="display" id="display" placeholder="Calculator"/>
+      </div>
+      <div class="flex hitem-center vitem-center">
+        <div class="numbers">
+          <button onclick="sevenc()" id="seven">7</button>
+        </div>
+        <div class="numbers">
+          <button onclick="eightc()" id="eight">8</button>
+        </div>
+        <div class="numbers"><button onclick="ninec()" id="nine">9</button></div>
+        <div class="multiply"><button onclick="multiplyc()" id="">*</button></div>
+      </div>
+      
+      <div class="flex hitem-center vitem-center">
+        <div class="numbers"><button onclick="fourc()" id="four">4</button></div>
+        <div class="numbers"><button onclick="fivec()" id="five">5</button></div>
+        <div class="numbers"><button onclick="sixc()" id="six">6</button></div>
+        <div class="minus"><button onclick="minusc()">-</button></div>
+      </div>
+
+      <div class="flex hitem-center vitem-center">
+        <div class="numbers"><button onclick="onec()" id="one">1</button></div>
+        <div class="numbers"><button onclick="twoc()" id="two">2</button></div>
+        <div class="numbers">
+          <button onclick="threec()" id="three">3</button>
+        </div>
+        <div class="plus"><button onclick="plusc()">+</button></div>
+    </div>
+
+    <div class="flex hitem-center vitem-center">
+      <div class="numbers">
+        <button type="reset" onclick="resetc()">AC</button>
+      </div>
+      <div class="numbers"><button onclick="zeroc()" id="zero">0</button></div>
+      <div class="equal"><button onclick="equalc()">=</button></div>
+      <div class="numbers"><button onclick="dividec()">/</button></div>
+    </div>
+  </div>
+  </body>
+  </html>
